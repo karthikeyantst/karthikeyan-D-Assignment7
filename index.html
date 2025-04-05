@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+</head>
+<body>
+    <script>
+    
+
+        var studentId = parseInt(prompt('Enter the Student ID'));
+        var studentName = prompt('Enter the Student Name');
+        var marks1 = parseInt(prompt('Enter the Tamil mark'));
+        var marks2 = parseInt(prompt('Enter the English mark'));
+        var marks3 = parseInt(prompt('Enter the Maths mark'));
+        var marks4 = parseInt(prompt('Enter the Science mark'));
+        var marks5 = parseInt(prompt('Enter the Social mark'));
+        var total = marks1 + marks2 + marks3 + marks4 + marks5;
+        var percentage = (total / 500) * 100;
+        
+        var grade = "";
+        if (percentage > 90) {
+            grade = "A";
+        } else if (percentage > 80 && percentage <= 90) {
+            grade = "B";
+        } else if (percentage > 70 && percentage <= 80) {
+            grade = "C";
+        } else if (percentage > 60 && percentage <= 70) {
+            grade = "D";
+        } else if (percentage > 50 && percentage <= 60) {
+            grade = "E";
+        } else {
+            grade = "Fail";
+        }
+
+        document.write("Student ID: " + studentId + "<br><br>");
+        document.write("Student Name: " + studentName + "<br><br>");
+        document.write("Tamil Mark: " + marks1 + "<br><br>");
+        document.write("English Mark: " + marks2 + "<br><br>");
+        document.write("Maths Mark: " + marks3 + "<br><br>");
+        document.write("Science Mark: " + marks4 + "<br><br>");
+        document.write("Social Mark: " + marks5 + "<br><br>");
+        document.write("Total Marks: " + total + "<br><br>");
+        document.write("Percentage: " + percentage.toFixed(2) + "%<br><br>");
+        document.write("Grade: " + grade + "<br><br>");
+    </script>
+</body>
+</html>
